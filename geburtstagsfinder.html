@@ -5,47 +5,50 @@
 
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
   <title>Geburtstagfinder</title>
-
+  <meta name="viewport" content="width=device-width">
+	
 
 
   <style>
     body {
       background-image: url("gutschein-geburtstag.jpg");
       background-color: #cccccc;
+      overflow:scroll;
     }
+    
   </style>
-</head>
-
-<body>
-  <h1 align="center">BirthdayFinder</h1>
   <?php
     include "search.php";
     include "set.php";
 
     ?>
-    <form action="set.php" method="get">
+</head>
 
-      <div style="position: absolute; left: 60%; top: 20%;"><label for="search">TELEFONNUMMER</label>
-        <input name="SetTel" id="search" placeholder="Suche&#8230;" type="search"><br>
-        <label for="search">GEBURTSTAG</label> <input name="SetGeb" id="search" placeholder="Suche&#8230;" type="search">
-        <p>
-          <input type="submit" value="absenden" align="left">
-        </p>
-      </div>
+<body >
+	<h1 align="center">BirthdayFinder</h1>
+	<Set align= "right" >
+	
+		<form action="set.php" method="get">
 
-
-    </form>
-    <form action="search.php" method="get">
-      <div style="position: absolute; left: 20%; top: 20%;"><label for="search">TELEFONNUMMER</label>
-        <input name="GetTel" id="search" placeholder="Suche&#8230;" type="search"><br> &nbsp;
-        <p>
-          <input type="submit" value="suchen" align="right">
-        </p>
-      </div>
-
-
-    </form>
-
+		<div style="position: absolute; left: 60%; top: 20%;"><label for="search">TELEFONNUMMER</label>
+			<input name="SetTel" id="search" placeholder="Tel&#8230;" type="tel"><br>
+			<label for="search">GEBURTSTAG</label> <input name="SetGeb" id="search" placeholder="dd.mm.jjjj&#8230;" type="date">
+			<p>
+			<input type="submit" value="absenden" align="left">
+			</p>
+		</div>
+		</form>
+    </Set>
+    <Get align= "left">
+		<form action="search.php" method="get">
+		<div style="position: absolute; left: 20%; top: 20%;"><label for="search">TELEFONNUMMER</label>
+			<input name="GetTel" id="search" placeholder="Suche&#8230;" type="search"><br> &nbsp;
+			<p>
+			<input type="submit" value="suchen" align="right">
+			</p>
+		</div>
+		</form>
+	</Get>
 
 
 </body>

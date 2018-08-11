@@ -1,5 +1,5 @@
 <?php
-echo "Gesuchte Tel ". $_GET['GetTel'];
+ $_GET['GetTel'];
 
 
 ?>
