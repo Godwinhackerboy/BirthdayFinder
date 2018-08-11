@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Geburtstagfinder</title>
+
+
+
+  <style>
+    body {
+      background-image: url("gutschein-geburtstag.jpg");
+      background-color: #cccccc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 align="center">BirthdayFinder</h1>
+  <?php
+    include "Search.php";
+    include "Set.php";
+
+    ?>
+    <form action="Set.php" method="get">
+
+      <div style="position: absolute; left: 60%; top: 20%;"><label for="search">TELEFONNUMMER</label>
+        <input name="SetTel" id="search" placeholder="Suche&#8230;" type="search"><br>
+        <label for="search">GEBURTSTAG</label> <input name="SetGeb" id="search" placeholder="Suche&#8230;" type="search"></div>
+      <p>
+        <input type="submit" value="absenden">
+      </p>
+
+    </form>
+    <form action="Search.php" method="get">
+      <div style="position: absolute; left: 20%; top: 20%;"><label for="search">TELEFONNUMMER</label>
+        <input name="GetTel" id="search" placeholder="Suche&#8230;" type="search"><br> &nbsp;
+      </div>
+      <p>
+        <input type="submit" value="suchen">
+      </p>
+
+    </form>
+
+
+
+</body>
+
+</html>
