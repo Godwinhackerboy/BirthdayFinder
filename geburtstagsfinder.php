@@ -11,28 +11,36 @@
 
   <style>
     body {
+	  height: calc(100vh - 44px);
       background-image: url("gutschein-geburtstag.jpg");
       background-color: #cccccc;
-      overflow:scroll;
+      overflow:auto;
+      text-align:center;
     }
     
+    h3{
+		border-style:dashed;
+		color:#ff0000;
+		top:90%;
+		position:relative;
+		width:30%
+		margin:0px 35% 0px 35%;
+	}
+    
+    
   </style>
-  <?php
-    include "search.php";
-    include "set.php";
-
-    ?>
+  
 </head>
 
 <body >
 	<h1 align="center">BirthdayFinder</h1>
 	<Set align= "right" >
 	
-		<form action="set.php" method="get">
+		<form action="" method="get">
 
 		<div style="position: absolute; left: 60%; top: 20%;"><label for="search">TELEFONNUMMER</label>
 			<input name="SetTel" id="search" placeholder="Tel&#8230;" type="tel"><br>
-			<label for="search">GEBURTSTAG</label> <input name="SetGeb" id="search" placeholder="dd.mm.jjjj&#8230;" type="date">
+			<label for="search">GEBURTSTAG</label> <input name="SetGeb" id="search" placeholder="tt.mm.jjjj&#8230;" type="date">
 			<p>
 			<input type="submit" value="absenden" align="left">
 			</p>
@@ -40,7 +48,7 @@
 		</form>
     </Set>
     <Get align= "left">
-		<form action="search.php" method="get">
+		<form action="" method="get">
 		<div style="position: absolute; left: 20%; top: 20%;"><label for="search">TELEFONNUMMER</label>
 			<input name="GetTel" id="search" placeholder="Suche&#8230;" type="search"><br> &nbsp;
 			<p>
@@ -48,8 +56,16 @@
 			</p>
 		</div>
 		</form>
+		
+		
 	</Get>
-
+	<?php
+			include "search.php";
+			include "set.php";
+	?>
+	<h3>
+		Wir Übernehmen keine Haftung für die eingegebenen Daten
+	</h3>
 
 </body>
 

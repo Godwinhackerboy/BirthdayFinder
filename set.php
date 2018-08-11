@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 $Tel = $_GET['SetTel'];
+if($Tel != ''){
 $BD = $_GET['SetGeb'];
 $servername = "localhost";
 $username = "user";
@@ -16,13 +17,13 @@ if($conection->connect_error){
 
 $TempArr = $connection->query("select * from TelNum WHERE Tel = '$Tel'");
 if($TempArr->num_rows > 0){
-	echo $TempArr->num_rows;
+	//echo $TempArr->num_rows;
 	//header("Location: geburtstagsfinder.html");
 }
 else {
   $sql = "INSERT INTO TelNum (Tel,Date) VALUE ('$Tel','$BD')";
   if ($connection->query($sql) === TRUE) {
-    echo "New record created successfully";
+    //echo "New record created successfully";
 	}
   
 }
@@ -30,4 +31,5 @@ else {
 //echo "ASdf";
 
 $connection->close();
+}
 ?>
