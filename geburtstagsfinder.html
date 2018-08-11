@@ -19,27 +19,30 @@
 <body>
   <h1 align="center">BirthdayFinder</h1>
   <?php
-    include "Search.php";
-    include "Set.php";
+    include "search.php";
+    include "set.php";
 
     ?>
-    <form action="Set.php" method="get">
+    <form action="set.php" method="get">
 
       <div style="position: absolute; left: 60%; top: 20%;"><label for="search">TELEFONNUMMER</label>
         <input name="SetTel" id="search" placeholder="Suche&#8230;" type="search"><br>
-        <label for="search">GEBURTSTAG</label> <input name="SetGeb" id="search" placeholder="Suche&#8230;" type="search"></div>
-      <p>
-        <input type="submit" value="absenden">
-      </p>
+        <label for="search">GEBURTSTAG</label> <input name="SetGeb" id="search" placeholder="Suche&#8230;" type="search">
+        <p>
+          <input type="submit" value="absenden" align = "left">
+        </p>
+      </div>
+
 
     </form>
-    <form action="Search.php" method="get">
+    <form action="search.php" method="get">
       <div style="position: absolute; left: 20%; top: 20%;"><label for="search">TELEFONNUMMER</label>
         <input name="GetTel" id="search" placeholder="Suche&#8230;" type="search"><br> &nbsp;
+        <p>
+          <input type="submit" value="suchen" align = "right">
+        </p>
       </div>
-      <p>
-        <input type="submit" value="suchen">
-      </p>
+
 
     </form>
 
