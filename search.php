@@ -1,12 +1,9 @@
 <?php
-	error_reporting(E_ALL);
 	$Tel = $_GET['GetTel'];
 	if($Tel != ''){
 		
 	
-	$servername = "localhost";
-	$username = "user";
-	$password = "123456";
+	include "secrets.php";
 	$list = "BirthdayFinder";
 	$connection = new mysqli($servername, $username, $password, $list);
 	if($connection->connect_error){
@@ -34,9 +31,15 @@
 		if($rand2 < 10){
 			$randt2 = "0" . $randt2;
 		}
+		$tempstring = rand($currDate-80,$currDate) . "-". $randt1 . "-". $randt2 ;
 		
-		echo "<h2 align = center> " .rand($currDate-80,$currDate). "-". $randt1 . "-". $randt2 ."</h2>";
-		echo "<h2 align = center> " ."jjjj/mm/tt"."</h2>";
+		//include_once "image_create.php";
+		
+		echo "<img style = 'width:70%;opacity:0.9' src='image_create.php?date=$tempstring' alt='Image created by a PHP script' >";
+		
+		
+		
+		
 		
 	}
 }

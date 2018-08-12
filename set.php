@@ -3,9 +3,7 @@ error_reporting(E_ALL);
 $Tel = $_GET['SetTel'];
 if($Tel != ''){
 $BD = $_GET['SetGeb'];
-$servername = "localhost";
-$username = "user";
-$password = "123456";
+include "secrets.php";
 $list = "BirthdayFinder";
 
 $connection = new mysqli($servername, $username, $password, $list);
