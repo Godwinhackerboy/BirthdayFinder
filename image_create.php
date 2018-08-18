@@ -1,5 +1,5 @@
 <?php
-putenv('GDFONTPATH=' . realpath('.'));
+
 $Date = $_GET['date'];
 header('Content-Type: image/png');
 $im = imagecreatetruecolor(900, 120);
@@ -13,7 +13,7 @@ imagefilledrectangle($im, 0, 0, 900, 120, $grey);
 
 
 
-$font = 'Font.ttf';
+$font = $_SERVER['DOCUMENT_ROOT'] . '/BirthdayFinder/Font.ttf';
 
 
 

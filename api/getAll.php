@@ -1,7 +1,7 @@
 <?php
-	include '/../secrets.php';
+	include	$_SERVER['DOCUMENT_ROOT'] . "/BirthdayFinder/secrets.php";
 	$link = new mysqli($servername, $username, $password,$list);
-	$result = $link->query("select * from TelNum")
+	$result = $link->query("SELECT * FROM $tabelle")
 	$json = array();
 	while($row = $result->fetch_assoc()){
 		//var_dump($row);

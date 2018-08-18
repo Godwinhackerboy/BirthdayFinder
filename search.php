@@ -1,34 +1,34 @@
 <?php
-	$Tel = $_GET['GetTel'];
+	$Tel = $_GET['getTel'];
 	if($Tel != ''){
-		
-	
+
+
 	include "secrets.php";
-	$list = "BirthdayFinder";
+
 	$connection = new mysqli($servername, $username, $password, $list);
 	if($connection->connect_error){
 		die("Connetion failed: " . $connection->connectt_error);
 
 	}
-	
-	$Data = $connection->query("select * from TelNum WHERE Tel = '$Tel'");
-	
+
+	$Data = $connection->query("SELECT * FROM $tabelle WHERE $column1 = '$Tel'");
+
 	while($row = $Data->fetch_assoc()){
-		$tempDat = $row['Date'] . "";
+		$tempDat = $row[$column2] . "";
 		
-		echo "<img style = 'width:70%;opacity:0.9' src='image_create.php?date=$tempDat' alt='Image created by a PHP script' >";
-		
+		echo "<img style = 'width:70%;opacity:0.9' src='image_create.php?date=$tempDat'  >";
+
 	}
 	if($Data->num_rows < 1){
-		
-		
-		echo "<img style = 'width:70%;opacity:0.9' src='image_create.php?date=No Data found' alt='Image created by a PHP script' >";
-		
-		
-		
-		
-		
+
+
+		echo "<img style = 'width:70%;opacity:0.9' src='image_create.php?date=No Data found'  >";
+
+
+
+
+
 	}
 }
-	
+
 ?>
