@@ -1,6 +1,6 @@
 <?php
-	include 'secrets.php';
-	$link = new mysqulli($servername, $username, $password,$list);
+	include '/../secrets.php';
+	$link = new mysqli($servername, $username, $password,$list);
 	$result = $link->query("select * from TelNum")
 	$json = array();
 	while($row = $result->fetch_assoc()){
