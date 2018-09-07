@@ -39,7 +39,7 @@
 
 <body >
 	<h1 align="center">BirthdayFinder</h1>
-	<form action="" method="get">
+	<form action="" method="post">
 	<table style="width:100%">
 		<tr>
 			<td>Telefonnummer</td>

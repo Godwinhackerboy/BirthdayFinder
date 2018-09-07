@@ -1,7 +1,7 @@
 <?php
 
-$Tel = $_GET['setTel'];
-$BD = $_GET['setGeb'];
+$Tel = $_POST['setTel'];
+$BD = $_POST['setGeb'];
 if($Tel != ''){
 include "secrets.php";
 

@@ -1,7 +1,7 @@
 <?php
 	include	$_SERVER['DOCUMENT_ROOT'] . "/BirthdayFinder/secrets.php";
 	$link = new mysqli($servername, $username, $password,$list);
-	$QNum = $_GET['getTel'];
+	$QNum = $_POST['getTel'];
 	$result = $link->query("SELECT * FROM $tabelle WHERE $column1 = '$QNum'");
 	$json = array();
 

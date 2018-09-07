@@ -1,5 +1,5 @@
 <?php
-	$Tel = $_GET['getTel'];
+	$Tel = $_POST['getTel'];
 	if($Tel != ''){
 
 
@@ -15,7 +15,7 @@
 
 	while($row = $Data->fetch_assoc()){
 		$tempDat = $row[$column2] . "";
-		
+
 		echo "<img style = 'width:70%;opacity:0.9' src='image_create.php?date=$tempDat'  >";
 
 	}
